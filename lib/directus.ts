@@ -12,7 +12,7 @@ import {
 //should be in env
 const apiClient = process.env.DIRECTUS_API_KEY
   ? createDirectus("https://data.zanda.info")
-      .with(staticToken("Qu2WI9gEwHRV4K10z6GTIMrjlDR7VQq8"))
+      .with(staticToken(process.env.DIRECTUS_API_KEY))
       .with(rest({ credentials: "include" }))
   : undefined;
 
